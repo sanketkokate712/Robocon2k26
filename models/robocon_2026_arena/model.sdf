@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='robocon_2026_arena'>
+    <static>true</static>
+    <link name='link'>
+      <collision name='collision'>
+        <geometry>
+          <mesh>
+            <uri>model://robocon_2026_arena/meshes/arena.stl</uri>
+            <scale>0.001 0.001 0.001</scale> <!-- Adjust scale if necessary, usually STEP is in mm, Gazebo is in meters -->
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://robocon_2026_arena/meshes/arena.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

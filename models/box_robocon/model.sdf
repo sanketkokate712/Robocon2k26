@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="box_robocon">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.5</size> <!-- 50cm box -->
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://box_robocon/materials/scripts</uri>
+            <uri>model://box_robocon/materials/textures</uri>
+            <name>Robocon/Logo</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

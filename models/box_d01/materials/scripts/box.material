@@ -1,0 +1,14 @@
+material Robocon/D01
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture d01_logo.png
+        scale 1 1
+      }
+    }
+  }
+}

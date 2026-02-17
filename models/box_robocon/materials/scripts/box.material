@@ -1,0 +1,14 @@
+material Robocon/Logo
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture robocon_logo.png
+        scale 1 1
+      }
+    }
+  }
+}

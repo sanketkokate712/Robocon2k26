@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <!-- No sun or ground plane to avoid network model fetches -->
+    
+    <!-- Manual Light Source -->
+    <light type="directional" name="sun_manual">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    
+    <!-- Boxes -->
+    <!-- Box 1: Robocon (Center) -->
+    <include>
+      <uri>model://box_robocon</uri>
+      <pose>0 0 0.5 0 0 0</pose>
+    </include>
+    
+    <!-- Box 2: D-01 (Right) -->
+    <include>
+      <uri>model://box_d01</uri>
+      <pose>0.6 0 0.5 0 0 0</pose>
+    </include>
+    
+    <!-- Box 3: Custom (Left) -->
+    <include>
+      <uri>model://box_custom</uri>
+      <pose>-0.6 0 0.5 0 0 0</pose>
+    </include>
+
+    <!-- Camera -->
+    <!-- Positioned at y=-4, z=1, rotated 90 deg yaw to face +y (towards boxes) -->
+    <include>
+      <uri>model://camera_ros</uri>
+      <pose>0 0 3 0 1.57 0</pose> 
+    </include>
+  </world>
+</sdf>

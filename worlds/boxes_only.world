@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+    <!-- Boxes -->
+    <!-- Box 1: Robocon (Center) -->
+    <include>
+      <uri>model://box_robocon</uri>
+      <pose>0 0 0.5 0 0 0</pose>
+    </include>
+    
+    <!-- Box 2: D-01 (Right) -->
+    <include>
+      <uri>model://box_d01</uri>
+      <pose>0.6 0 0.5 0 0 0</pose>
+    </include>
+    
+    <!-- Box 3: Custom (Left) -->
+    <include>
+      <uri>model://box_custom</uri>
+      <pose>-0.6 0 0.5 0 0 0</pose>
+    </include>
+
+    <!-- Camera -->
+    <!-- Positioned at y=-4, z=1, rotated 90 deg yaw to face +y (towards boxes) -->
+    <include>
+      <uri>model://camera_ros</uri>
+      <pose>0 -4 1 0 0 1.57</pose> 
+    </include>
+  </world>
+</sdf>
